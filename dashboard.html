@@ -36,41 +36,41 @@
         </div>
     </header>
 
-    <!-- LAYOUT CON SIDEBAR E IFRAME CONTENEDOR -->
-    <div class="admin-layout flex-grow-1 d-flex overflow-hidden">
-        
-        <!-- SIDEBAR DE NAVEGACIÓN -->
-        <aside class="sidebar p-3 flex-shrink-0">
-            <ul class="nav nav-pills flex-column" id="sidebarMenu">
-                <li class="nav-item">
-                <!-- El atributo target debe coincidir con el name del iframe -->
-                    <a href="resumen.html" target="adminFrame" class="nav-link active">
-                        <i class="fa-solid fa-chart-line me-2"></i> Resumen
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="conductores.html" target="adminFrame" class="nav-link active">
-                        <i class="fa-solid fa-id-card me-2"></i> Conductores
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="rutas.html" target="adminFrame" class="nav-link">
-                        <i class="fa-solid fa-route me-2"></i> Rutas y Horarios
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="unidades.html" target="adminFrame" class="nav-link">
-                        <i class="fa-solid fa-bus me-2"></i> Flota / Unidades
-                    </a>
-                </li>
-            </ul>
-        </aside>
+    <!-- LAYOUT CON SIDEBAR E IFRAME CONTENEDOR (CORREGIDO) -->
+<div class="admin-layout flex-grow-1 d-flex overflow-hidden" style="min-height: calc(100vh - 60px);">
+    
+    <!-- SIDEBAR DE NAVEGACIÓN -->
+    <aside class="sidebar p-3 flex-shrink-0 bg-white border-end" style="width: 240px;">
+        <ul class="nav nav-pills flex-column gap-1" id="sidebarMenu">
+            <li class="nav-item">
+                <a href="resumen.html" target="adminFrame" class="nav-link active">
+                    <i class="fa-solid fa-chart-line me-2"></i> Resumen
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- Se remueve 'active' para que solo haya una pestaña seleccionada -->
+                <a href="conductores.html" target="adminFrame" class="nav-link">
+                    <i class="fa-solid fa-id-card me-2"></i> Conductores
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="rutas.html" target="adminFrame" class="nav-link">
+                    <i class="fa-solid fa-route me-2"></i> Rutas y Horarios
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="unidades.html" target="adminFrame" class="nav-link">
+                    <i class="fa-solid fa-bus me-2"></i> Flota / Unidades
+                </a>
+            </li>
+        </ul>
+    </aside>
 
-        <!-- MARCO CONTENEDOR QUE RENDERIZA LOS OTROS ARCHIVOS HTML -->
-        <main class="flex-grow-1 bg-light">
-            <iframe name="adminFrame" src="conductores.html" class="w-100 h-100 border-0"></iframe>
-        </main>
-    </div>
+    <!-- MARCO CONTENEDOR (PANTALLA COMPLETA) -->
+    <main class="flex-grow-1 bg-light d-flex flex-column" style="height: 100%;">
+        <iframe name="adminFrame" src="resumen.html" class="w-100 flex-grow-1 border-0" style="min-height: 100%; display: block;"></iframe>
+    </main>
+</div>
 
     <!-- PIE DE PÁGINA (FOOTER) -->
     <footer class="border-top bg-white py-4">
