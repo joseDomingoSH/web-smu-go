@@ -235,5 +235,53 @@
             </nav>
         </div>
     </footer>
+
+    <!-- MODAL DE REGISTRO DE EMPRESA -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Registro de Empresa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="small text-muted">Registro simulado en modo demostración. No se crean cuentas reales ni se almacena información personal.</p>
+                    
+                    <form id="formRegistroEmpresa" class="row g-3">
+                        <div class="col-12">
+                            <label for="razonSocial" class="form-label small fw-semibold">Razón Social</label>
+                            <input type="text" class="form-control" id="razonSocial" placeholder="Urbanos del Valle S.A. de C.V." required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="responsable" class="form-label small fw-semibold">Responsable</label>
+                            <input type="text" class="form-control" id="responsable" placeholder="José Domingo Sánchez" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="correo" class="form-label small fw-semibold">Correo Corporativo</label>
+                            <input type="email" class="form-control" id="correo" placeholder="operacion@empresa.mx" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label small fw-semibold">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="55 1234 5678" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="flota" class="form-label small fw-semibold">Tamaño de Flota</label>
+                            <input type="number" class="form-control" id="flota" min="1" placeholder="24" required>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100">Crear cuenta demo</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP 5 JS + SWEETALERT2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Script personalizado -->
+    <script src="js/main.js"></script>
 </body>
 </html>
