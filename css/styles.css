@@ -1,0 +1,46 @@
+/* Estilos globales y reutilizables */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.gradient-brand {
+    background: linear-gradient(135deg, #5999f8 0%, #2876eb 100%);
+}
+
+.surface-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.surface-card:hover {
+    transform: translateY(-4px);
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #e7f1ff;
+    color: #5691eb;
+}
+
+.brand-subtitle {
+    font-size: 0.65rem !important;
+    letter-spacing: 1px;
+}
+
+/* Ajustes de enlaces de navegación estática */
+.nav-link {
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
