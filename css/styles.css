@@ -44,3 +44,34 @@ body {
 .nav-link:hover {
     color: #0d6efd !important;
 }
+/* Control de visibilidad para secciones dinámicas */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-layout {
+    height: calc(100vh - 60px) !important; /* Resta los 60px de la barra superior/header */
+    overflow: hidden !important;
+}
+
+.admin-layout main {
+    height: 100% !important;
+}
+
+.admin-layout iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    border: 0 !important;
+    display: block !important;
+}
